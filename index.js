@@ -278,7 +278,7 @@ app.post("/create-payment-intent", async (req, res) => {
     res.send({
       clientSecret: paymentIntent.client_secret,
     });
-    console.log(paymentIntent);
+    // console.log(paymentIntent);
   } catch (error) {
     console.log(error.message);
   }
@@ -298,7 +298,7 @@ app.get("/jwt", async (req, res) => {
     // res.status(403).send(user)
     res.status(403).send({ accessToken: "" });
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
     res.send({ accessToken: "" });
   }
 });
